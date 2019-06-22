@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/android:api-26-alpha
+      - image: circleci/android:api-28-alpha
 
     environment:
       # Customize the JVM maximum heap limit
@@ -13,9 +13,8 @@ jobs:
     steps:
       - checkout
 
-       Download and cache dependencies
       - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "KotlinApp/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 
       - run:
           name: update android sdk
@@ -28,7 +27,7 @@ jobs:
 
       - save_cache:
           paths: ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "KotlinApp/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 
       # run unit tests!
       - run:
