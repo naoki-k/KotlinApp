@@ -35,6 +35,7 @@ jobs:
           command: |
               ./gradlew test
               ./gradlew lint test
+              ./gradlew ktlint
       - run:
           name: Show list of system-images
           command: sdkmanager --list --verbose | grep system-images
