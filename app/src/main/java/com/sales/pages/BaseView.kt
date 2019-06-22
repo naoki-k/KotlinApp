@@ -1,5 +1,3 @@
 package com.sales.pages
 
-interface BaseView {
-
-}
+interface BaseView
