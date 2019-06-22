@@ -13,9 +13,9 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
+       Download and cache dependencies
       - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "chatmessageview/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "KotlinApp/build.gradle" }}
 
       - run:
           name: update android sdk
@@ -28,7 +28,7 @@ jobs:
 
       - save_cache:
           paths: ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "chatmessageview/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "KotlinApp/build.gradle" }}
 
       # run unit tests!
       - run:
@@ -53,4 +53,3 @@ jobs:
       - store_artifacts:
           path: example/build/reports
           destination: reports
-          
