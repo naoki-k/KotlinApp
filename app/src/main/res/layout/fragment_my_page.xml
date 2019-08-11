@@ -4,11 +4,11 @@
     <data>
         <variable
             name="viewModel"
-            type="com.sales.pages.home.HomeViewModel" />
+            type="com.sales.pages.my_page.MyPageViewModel" />
     </data>
 
     <LinearLayout
-        android:id="@+id/home_container"
+        android:id="@+id/my_page_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
@@ -19,14 +19,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
-            android:text="HELLO WORLD!" />
-
-        <Button
-            android:id="@+id/change_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:onClick="@{viewModel::onClick}"
-            android:text="Change" />
+            android:text="My Page" />
     </LinearLayout>
 </layout>

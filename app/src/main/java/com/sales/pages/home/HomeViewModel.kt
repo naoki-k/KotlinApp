@@ -1,4 +1,4 @@
-package com.sales.pages.top
+package com.sales.pages.home
 
 import android.databinding.BaseObservable
 import android.view.View

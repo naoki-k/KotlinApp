@@ -1,4 +1,4 @@
-package com.sales.pages.top
+package com.sales.pages.home
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -20,8 +20,8 @@ class HomeFragment : Fragment(), HomeView {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeBinding.bind(view)
         viewModel = HomeViewModelImpl()
-        viewModel!!.init(this)
-        binding!!.viewModel = viewModel
+        viewModel?.init(this)
+        binding?.viewModel = viewModel
     }
 
     companion object {
