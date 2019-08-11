@@ -22,9 +22,9 @@ class TopActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, TopView
         viewModel = TopViewModelImpl()
         viewModel?.init(this)
         binding?.viewModel = viewModel
-
-        val fragmentUtil = FragmentUtil(supportFragmentManager, R.id.top_container)
-        fragmentUtil.openFragment(HomeFragment.createInstance())
+//
+//        val fragmentUtil = FragmentUtil(supportFragmentManager, R.id.top_container)
+//        fragmentUtil.openFragment(HomeFragment.createInstance())
 
         pager.addOnPageChangeListener(this)
         setTabLayout()

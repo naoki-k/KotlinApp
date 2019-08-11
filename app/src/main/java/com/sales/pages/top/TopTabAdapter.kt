@@ -11,11 +11,16 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.sales.R
 import com.sales.pages.home.HomeFragment
+import com.sales.pages.my_page.MyPageFragment
 
 class TopTabAdapter(fragmentManager: FragmentManager, private val context: Context) : FragmentStatePagerAdapter(fragmentManager) {
     private val pageTitle = arrayOf("HOME", "MYPAGE")
     override fun getItem(position: Int): Fragment {
-        return HomeFragment.createInstance()
+        return when (position) {
+            0 ->  HomeFragment.createInstance()
+            1 ->  MyPageFragment.createInstance()
+            else ->  HomeFragment.createInstance()
+        }
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
